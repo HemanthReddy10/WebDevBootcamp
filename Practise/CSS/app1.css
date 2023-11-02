@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+p{
+    font-weight: 100;
+    line-height: 2;
+    letter-spacing: 2px;
+
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: magenta underline wavy;
+}
