@@ -3,6 +3,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 
 numbers.filter(n => {
     return n < 10
 })
+// const nums=numbers.map((num)=>{
+//     return num<10;
+// }) //if we use map its returning true / false not the modified content
+const nums=numbers.filter((num)=>num<10);
 
 
 const movies = [

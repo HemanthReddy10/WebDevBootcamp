@@ -1,13 +1,12 @@
-console.log("HELLO!!!...")
+console.log("HELLO!!!...");
 setTimeout(() => {
-    console.log("...are you still there?")
-}, 3000)
+  console.log("...are you still there?");
+}, 3000);
 
-console.log("GOODBYE!!")
-
+console.log("GOODBYE!!");
 
 const id = setInterval(() => {
-    console.log(Math.random())
+  console.log(Math.random());
 }, 2000);
 
 // clearInterval(id);
