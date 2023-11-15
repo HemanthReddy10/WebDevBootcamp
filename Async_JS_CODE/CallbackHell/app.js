@@ -49,6 +49,10 @@ delayedColorChange('red', 1000, () => {
 //     //if API is down, or request failed
 // })
 
+const example=()=>{
+    setTimeout(()=>{
 
+    },3000)
+}
 
 
