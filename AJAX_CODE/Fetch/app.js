@@ -44,3 +44,22 @@ const loadStarWarsPeople = async () => {
 };
 
 loadStarWarsPeople();
+
+
+
+
+// practise
+
+fetch("https://swapi.dev/api/people/1/")
+.then((res)=>{
+  console.log(res);
+  
+})
+.then((data)=>{
+  console.log(data);
+  
+})
+.then((e)=>{
+  console.log(e);
+  
+})

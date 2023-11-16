@@ -18,3 +18,6 @@ const getStarWarsPerson = async (id) => {
 
 getStarWarsPerson(5);
 getStarWarsPerson(10);
+
+
+

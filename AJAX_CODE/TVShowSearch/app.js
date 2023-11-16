@@ -17,3 +17,17 @@ const makeImages = (shows) => {
         }
     }
 }
+
+
+// practise:
+const form=document.querySelector("#searchForm");
+form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      const searchtext=form.elements.query.value;
+      const config = { params: { q: searchTerm } }
+      const res=await axios.get(`http://api.tvmaze.com/search/shows`,params);
+      const imag=document.createElement('img');
+      imag.src=res.data[0].show.image.medium;
+      document.body.append(imag);
+      form.elements.query.value = '';
+})

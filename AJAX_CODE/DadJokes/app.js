@@ -19,3 +19,17 @@ const getDadJoke = async () => {
 };
 
 button.addEventListener("click", addNewJoke);
+
+
+// Practise:
+const funckyfunc=async ()=>{
+  const res=await axios.get("https://icanhazdadjoke.com/",{ headers: { Accept: "application/json" }});
+  return res.data.joke;
+};
+
+const dummyfunc=async ()=>{
+const joke=await funckyfunc();
+const neLi=document.createElement("li");
+neLi.append(joke);
+
+};
