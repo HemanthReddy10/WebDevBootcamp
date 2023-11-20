@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Enablement Onboarding</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin-left: 1em; /* Adjust the left margin for better readability */
+    }
+
+    #onboarding-container {
+      display: none;
+      width: 70%;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1s ease-out;
+      transition: background-color 0.5s ease-in-out;
+      background-color: #f6fff8;
+      z-index: 1;
+    }
+
+    .onboarding-step {
+      display: none;
+    }
+
+    .onboarding-step.active {
+      display: block;
+    }
+
+    h1, h2, p {
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #4caf50;
+      color: #fff;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .button.next {
+      background-color: #2196f3;
+    }
+
+    .icon {
+      font-size: 48px;
+      color: #2196f3;
+    }
+
+    .emoji {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .step-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page Content -->
+<button class="button" id="startButton" onclick="startOnboarding()">Click Me!</button>
+
+<!-- Onboarding Container -->
+<div id="onboarding-container">
+  <div class="onboarding-step active" id="step1">
+    <h1 class="step-title">Welcome to API Enablement Launchpad!</h1>
+    <p>Accelerate development and unlock new business opportunities with our API Marketplace and Platform.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F680;</span> The API enablement Product was created to dramatically increase the speed of solution development and digital innovation with an API Marketplace and API Platform that enables composable business architecture.</li>
+        <li><span class="emoji">&#x1F4A1;</span> Our platform replaces redundant point-to-point integration, centralized integration development, and non-curated API catalog.</li>
+        <li><span class="emoji">&#x1F4BB;</span> Our product offers a Platform to find and subscribe to digital products and enable product teams to build world-class digital products.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-cogs"></i>
+    <div class="button-container">
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step2">
+    <h1 class="step-title">Products Main Capabilities</h1>
+    <p>Discover how our platform accelerates product development and provides cost savings to product teams.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F680;</span> Accelerate development of new products while unlocking new business opportunities.</li>
+        <li><span class="emoji">&#x1F4B8;</span> API Marketplace provides cost savings to product teams by simplifying the ability to consume valuable APIs.</li>
+        <li><span class="emoji">&#x1F4E1;</span> Support product teams by identifying and promoting valuable APIs. Automated system lifecycle for providers to accelerate the creation of API contracts and eliminate point-to-point integration.</li>
+        <li><span class="emoji">&#x1F50D;</span> Advanced end-user and application monitoring.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-rocket"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step3">
+    <h1 class="step-title">Did You Know?</h1>
+    <div class="content">
+      <ul>
+        <li>As of May 2023, there are more than 120 APIs in production enabling multiple capabilities.</li>
+        <li>With the help of our API Launchpad, new APIs have moved from idea to design 70-80% quicker.</li>
+        <li>An API-first integration approach enables providers to build reusable APIs eliminating redundant interfaces, enabling real-time on-demand data exchange, and rapidly facilitating new use cases.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-info-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step4">
+    <h1 class="step-title">What Else Do I Need to Know?</h1>
+    <p>Explore additional information to enhance your understanding of our API Enablement platform.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F4E1;</span> <a href="#">API Marketplace</a></li>
+        <li><span class="emoji">&#x1F468;&#x200D;&#x1F4BB;</span> <a href="#">API Provider Lifecycle</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">API Marketplace Documentation</a></li>
+        <li><span class="emoji">&#x1F3E2;</span> <a href="#">API Platforms</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">Design Guidelines</a></li>
+        <li><span class="emoji">&#x1F4DD;</span> <a href="#">API Glossary</a></li>
+        <li><span class="emoji">&#x1F4DD;</span> <a href="#">Regulations & Guidelines</a></li>
+      </ul>
+    </div>
+    <i class="icon fas fa-question-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step5">
+    <h1 class="step-title">Get Started</h1>
+    <p>Visit our landing page, join us on TEAMS, and explore the Marketplace Quick Guide.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F3E2;</span> <a href="#">Visit our Landing Page</a></li>
+        <li><span class="emoji">&#x1F465;</span> <a href="#">Join us on TEAMS</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">Marketplace Quick Guide</a></li>
+      </ul>
+    </div>
+    <i class="icon fas fa-play-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button" onclick="finishOnboarding()">Finish</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function startOnboarding() {
+    document.getElementById('startButton').style.display = 'none';
+    document.getElementById('onboarding-container').style.display = 'block';
+    document.getElementById('onboarding-container').style.animation = 'fadeIn 1s ease-out';
+  }
+
+  function hideOnboarding() {
+    document.getElementById('onboarding-container').style.display = 'none';
+  }
+
+  let currentStep = 1;
+
+  function nextStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    currentStep = Math.min(currentStep + 1, 5);
+    const nextStepElement = document.getElementById(`step${currentStep}`);
+    nextStepElement.classList.add('active');
+  }
+
+  function prevStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    currentStep = Math.max(currentStep - 1, 1);
+    const prevStepElement = document.getElementById(`step${currentStep}`);
+    prevStepElement.classList.add('active');
+  }
+
+  function finishOnboarding() {
+    alert('Congratulations! You have completed the API Enablement onboarding process.');
+    hideOnboarding();
+  }
+</script>
+
+</body>
+</html>

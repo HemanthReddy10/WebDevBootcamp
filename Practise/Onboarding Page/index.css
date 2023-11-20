@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-left: 1em; /* Adjust the left margin for better readability */
+}
+
+#onboarding-container {
+  display: none;
+  width: 70%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+  transition: background-color 0.5s ease-in-out;
+  background-color: #f6fff8;
+  z-index: 1;
+}
+
+.onboarding-step {
+  display: none;
+}
+
+.onboarding-step.active {
+  display: block;
+}
+
+h1,
+h2,
+p {
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.button.next {
+  background-color: #2196f3;
+}
+
+.icon {
+  font-size: 48px;
+  color: #2196f3;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

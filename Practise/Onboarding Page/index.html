@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Enablement Onboarding</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<!-- Home Page Content -->
+
+
+<button class="button" id="startButton" onclick="startOnboarding()">Click Me!</button>
+
+<!-- Onboarding Container -->
+<div id="onboarding-container">
+  <div class="onboarding-step active" id="step1">
+    <h1 class="step-title">Welcome to API Enablement Launchpad!</h1>
+    <p>Accelerate development and unlock new business opportunities with our API Marketplace and Platform.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F680;</span> The API enablement Product was created to dramatically increase the speed of solution development and digital innovation with an API Marketplace and API Platform that enables composable business architecture.</li>
+        <li><span class="emoji">&#x1F4A1;</span> Our platform replaces redundant point-to-point integration, centralized integration development, and non-curated API catalog.</li>
+        <li><span class="emoji">&#x1F4BB;</span> Our product offers a Platform to find and subscribe to digital products and enable product teams to build world-class digital products.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-cogs"></i>
+    <div class="button-container">
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step2">
+    <h1 class="step-title">Products Main Capabilities</h1>
+    <p>Discover how our platform accelerates product development and provides cost savings to product teams.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F680;</span> Accelerate development of new products while unlocking new business opportunities.</li>
+        <li><span class="emoji">&#x1F4B8;</span> API Marketplace provides cost savings to product teams by simplifying the ability to consume valuable APIs.</li>
+        <li><span class="emoji">&#x1F4E1;</span> Support product teams by identifying and promoting valuable APIs. Automated system lifecycle for providers to accelerate the creation of API contracts and eliminate point-to-point integration.</li>
+        <li><span class="emoji">&#x1F50D;</span> Advanced end-user and application monitoring.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-rocket"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step3">
+    <h1 class="step-title">Did You Know?</h1>
+    <div class="content">
+      <ul>
+        <li>As of May 2023, there are more than 120 APIs in production enabling multiple capabilities.</li>
+        <li>With the help of our API Launchpad, new APIs have moved from idea to design 70-80% quicker.</li>
+        <li>An API-first integration approach enables providers to build reusable APIs eliminating redundant interfaces, enabling real-time on-demand data exchange, and rapidly facilitating new use cases.</li>
+      </ul>
+    </div>
+    <i class="icon fas fa-info-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step4">
+    <h1 class="step-title">What Else Do I Need to Know?</h1>
+    <p>Explore additional information to enhance your understanding of our API Enablement platform.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F4E1;</span> <a href="#">API Marketplace</a></li>
+        <li><span class="emoji">&#x1F468;&#x200D;&#x1F4BB;</span> <a href="#">API Provider Lifecycle</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">API Marketplace Documentation</a></li>
+        <li><span class="emoji">&#x1F3E2;</span> <a href="#">API Platforms</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">Design Guidelines</a></li>
+        <li><span class="emoji">&#x1F4DD;</span> <a href="#">API Glossary</a></li>
+        <li><span class="emoji">&#x1F4DD;</span> <a href="#">Regulations & Guidelines</a></li>
+      </ul>
+    </div>
+    <i class="icon fas fa-question-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button next" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <div class="onboarding-step" id="step5">
+    <h1 class="step-title">Get Started</h1>
+    <p>Visit our landing page, join us on TEAMS, and explore the Marketplace Quick Guide.</p>
+    <div class="content">
+      <ul>
+        <li><span class="emoji">&#x1F3E2;</span> <a href="#">Visit our Landing Page</a></li>
+        <li><span class="emoji">&#x1F465;</span> <a href="#">Join us on TEAMS</a></li>
+        <li><span class="emoji">&#x1F4D6;</span> <a href="#">Marketplace Quick Guide</a></li>
+      </ul>
+    </div>
+    <i class="icon fas fa-play-circle"></i>
+    <div class="button-container">
+      <button class="button" onclick="prevStep()">Back</button>
+      <button class="button" onclick="finishOnboarding()">Finish</button>
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
