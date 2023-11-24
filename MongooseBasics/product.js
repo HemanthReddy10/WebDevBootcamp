@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
-        min: [0, 'Price must be positive ya dodo!']
+        min: [0, 'Price must be positive ya dodo!']    //setting the custom messages
     },
     onSale: {
         type: Boolean,
@@ -36,7 +36,7 @@ const productSchema = new mongoose.Schema({
     },
     size: {
         type: String,
-        enum: ['S', 'M', 'L']
+        enum: ['S', 'M', 'L']    //size should be inbetween those 3 values
     }
 
 });
@@ -95,7 +95,7 @@ const findProduct = async () => {
 //         console.log(err)
 //     })
 
-// Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: 9 }, { new: true, runValidators: true })
+// Product.findOneAndUpdate({ name: 'Cycling Jersey' }, { price: 9 }, { new: true, runValidators: true })
 //     .then(data => {
 //         console.log("IT WORKED!")
 //         console.log(data);
