@@ -24,10 +24,28 @@ app.set('view engine','ejs');
 
 
 // Routes 
-app.get('/Product',async (req,res)=>{
-    const products=await Product.find({});
-    console.log(products);
-    res.send('all products will be here');
+
+const categories = ['fruit', 'vegetable', 'dairy'];
+
+app.get('/products', async (req, res) => {
+    const { category } = req.query;
+    if (category) {
+        const products = await Product.find({ category })
+        res.render('products/index', { products, category })
+    } else {
+        const products = await Product.find({})
+        res.render('products/index', { products, category: 'All' })
+    }
+})
+
+
+
+app.get('/Products/:id',async(req,res)=>{
+    const {id}=req.params;
+    const product=await Product.findById(id);
+    // console.log(product)
+    res.render('products/show',{product})
+
 })
 
 

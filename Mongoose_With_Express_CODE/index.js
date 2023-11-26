@@ -23,8 +23,11 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 
+// Routes 
 const categories = ['fruit', 'vegetable', 'dairy'];
 
+
+// All Products route 
 app.get('/products', async (req, res) => {
     const { category } = req.query;
     if (category) {
@@ -36,6 +39,7 @@ app.get('/products', async (req, res) => {
     }
 })
 
+// new product route 
 app.get('/products/new', (req, res) => {
     res.render('products/new', { categories })
 })
@@ -46,12 +50,15 @@ app.post('/products', async (req, res) => {
     res.redirect(`/products/${newProduct._id}`)
 })
 
+
+// getting product by id 
 app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id)
     res.render('products/show', { product })
 })
 
+// getting the product by id and editing it 
 app.get('/products/:id/edit', async (req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id);
