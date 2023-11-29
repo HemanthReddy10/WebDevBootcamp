@@ -5,6 +5,8 @@ const morgan = require('morgan');
 
 app.use(morgan('tiny'));
 
+
+// middleware
 app.use((req, res, next) => {
     req.requestTime = Date.now();
     console.log(req.method, req.path);
@@ -50,6 +52,7 @@ app.get('/dogs', (req, res) => {
     res.send('WOOF WOOF!')
 })
 
+// protecting specific routes
 app.get('/secret', verifyPassword, (req, res) => {
     res.send('MY SECRET IS: Sometimes I wear headphones in public so I dont have to talk to anyone')
 })
