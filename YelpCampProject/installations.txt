@@ -1,1 +1,0 @@
-npm i method-override express nodemon mongoose
